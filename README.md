@@ -5,3 +5,7 @@
 ### `npm install`
 
 ### `npm start`
+
+## 시연 영상
+
+  <img src="https://user-images.githubusercontent.com/110521303/219057884-a5674057-92cb-4516-8dd9-860d900ab4aa.gif">
