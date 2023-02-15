@@ -11,12 +11,12 @@ const Signin = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     if (idRef.current.value === "" || idRef.current.value === undefined) {
-      alert("아이디를 입력하세요!!!");
+      alert("아이디를 입력하세요!");
       idRef.current.focus();
       return false;
     }
     if (pwRef.current.value === "" || pwRef.current.value === undefined) {
-      alert("패스워드를 입력하세요!!!");
+      alert("패스워드를 입력하세요!");
       pwRef.current.focus();
       return false;
     }
