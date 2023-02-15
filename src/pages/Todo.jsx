@@ -26,7 +26,7 @@ const Todo = () => {
   };
 
   const postTodolist = () => {
-    //투두 리스트 가져오는 함수
+    //투두 리스트 추가 함수
     const url = "https://pre-onboarding-selection-task.shop/todos";
     fetch(url, {
       method: "POST",
@@ -42,7 +42,7 @@ const Todo = () => {
       .then((res) => {
         console.log(res);
         todoRef.current.value = "";
-        getTodoList();
+        getTodoList(); //추가 후 투두 리스트 다시 불러오기
       })
       .catch((e) => {
         console.error(e);
@@ -50,6 +50,7 @@ const Todo = () => {
   };
 
   const deleteTodo = (index) => {
+    //삭제함수
     const deleteItem = todos.filter((idx) => idx.id === index.id);
     const id = deleteItem[0].id;
     const url = `https://pre-onboarding-selection-task.shop/todos/${id}`;
@@ -61,7 +62,7 @@ const Todo = () => {
     })
       .then((res) => {
         console.log(res);
-        getTodoList();
+        getTodoList(); //삭제 후 투두 리스트 다시 불러오기
       })
       .catch((e) => {
         console.error(e);

@@ -14,6 +14,7 @@ const TodoList = ({ list, deleteTodo, getTodoList }) => {
     }
   };
   const editClick = () => {
+    //수정 클릭시 input 변환용
     setEdit(!edit);
   };
   return (
